@@ -10,6 +10,9 @@
 }
 .title-text{
     text-align: center;
+    padding: 70px;
+    opacity: 0;
+    animation: slideRight 1.3s ease forwards;
 }
 .title-text p{
     margin: auto;
@@ -43,6 +46,9 @@
     flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    opacity: 0;
+    animation: car 1s ease forwards;
+    animation-delay: 2s;
 }
 .features{
     flex-basis: 50%;
@@ -85,6 +91,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
     margin: auto;
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 2s;
 }
 .single-service{
     flex-basis: 48%;
@@ -134,4 +143,35 @@ hr{
 .single-service:hover .service-desc{
     bottom: 40%;
     opacity: 1;
+}
+/*  */
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes car{
+    0% {
+        transform: translate(-300px,300px) scale(0);
+        opacity:0;
+    }
+    100% {
+        transform: translate(0,0) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes zoomOut{
+    0% {
+        transform:scale(1.1);
+        opacity:1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }

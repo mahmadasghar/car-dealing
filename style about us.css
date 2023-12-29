@@ -12,6 +12,9 @@
 .title-text{
     text-align: center;
     padding: 70px;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2
 }
 .title-text p{
     margin: auto;
@@ -52,6 +55,9 @@
     margin-bottom: 20px;
     color: #fff;
     position: relative;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay:.8s;
 }
 .single-service img{
     width: 100%;
@@ -94,4 +100,45 @@ hr{
     bottom: 40%;
     opacity: 1;
 }
-
+/*  */
+@keyframes rhombus2{
+    0% {
+        right:-40%;
+        opacity:0;
+    }
+    100% {
+        right:-25%;
+        opacity: 1;
+    }
+}
+/*  */
+/* @keyframes slideSci{
+    0% {
+        transform: translateY(100px) rotate(45deg);
+        opacity:0;
+    }
+    100% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+} */
+@keyframes slideLeft{
+    0% {
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0% {
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

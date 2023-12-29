@@ -12,6 +12,8 @@
 .title-text{
     text-align: center;
     padding: 70px;
+     opacity: 0;
+    animation: slideTop 1s ease forwards;
 }
 .title-text p{
     margin: auto;
@@ -55,6 +57,9 @@
     box-shadow: 0 10px 20px 20px #0f0f0f14;
     cursor: pointer;
     transition: transform .5s;
+    opacity: 0;
+    animation: zoomOut 1s ease forwards;
+    animation-delay: 2s;
 }
 .review-col p{
     font-size: 14px;
@@ -78,4 +83,25 @@
 }
 .review-col:hover{
     transform: translateY(-7px);
+}
+/*  */
+@keyframes slideTop{
+    0% {
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomOut{
+    0% {
+        transform:scale(1.1);
+        opacity:1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
