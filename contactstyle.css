@@ -1,13 +1,13 @@
 *{
-    margin: 0;
+    margin:0 ;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
-#review{
-    width: 100%;
-    padding: 70px 0;
-    background: linear-gradient(#fff,#1743e3);
+#contact{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
 }
 .title-text{
     text-align: center;
@@ -40,49 +40,45 @@
 .title-text h1{
     font-size: 50px;
 }
-.review-row{
+.footer-row{
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: space-around;
     flex-wrap: wrap;
     opacity: 0;
-    animation: zoomOut 1s ease forwards;
+    animation: car 1s ease forwards;
     animation-delay: 2s;
 }
-.review-col{
-    background-color: #f0efef;
-    flex-basis: 28%;
+.footer-left,.footer-right{
+    flex-basis: 45%;
     padding: 10px;
-    margin: 30px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px 20px #0f0f0f14;
-    cursor: pointer;
-    transition: transform .5s;
+    margin-bottom: 20px;
 }
-.review-col p{
-    font-size: 14px;
+.footer-right{
+    text-align: right;
+
 }
-.user{
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-.user img{
-    width: 40px;
-    margin-right: 20px;
-    border-radius: 3px;
-}
-.user-info .fa{
-    margin-left: 10px;
+.footer-row h1{
+    margin: 10px 0;
     color: #1743e3;
 }
-.user-info small{
-    color: #1743e3;
+.footer-row p{
+    margin: 10px 0;
+    line-height: 35px;
 }
-.review-col:hover{
-    transform: translateY(-7px);
+.footer-left .fa,.footer-right .fa{
+    font-size: 20px;
+    color: #1743e3;
+    margin: 10px;
+}
+.footer-img{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%,-50%);
 }
 /*  */
 @keyframes slideTop{
@@ -95,13 +91,13 @@
         opacity: 1;
     }
 }
-@keyframes zoomOut{
+@keyframes car{
     0% {
-        transform:scale(1.1);
-        opacity:1;
+        transform: translate(-300px,300px) scale(0);
+        opacity:0;
     }
     100% {
-        transform: scale(1);
+        transform: translate(0,0) scale(1);
         opacity: 1;
     }
 }
